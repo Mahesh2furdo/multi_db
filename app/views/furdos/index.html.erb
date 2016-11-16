@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Furdos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Client name</th>
+      <th>Location</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @furdos.each do |furdo| %>
+      <tr>
+        <td><%= furdo.client_name %></td>
+        <td><%= furdo.location %></td>
+        <td><%= link_to 'Show', furdo %></td>
+        <td><%= link_to 'Edit', edit_furdo_path(furdo) %></td>
+        <td><%= link_to 'Destroy', furdo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Furdo', new_furdo_path %>

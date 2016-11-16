@@ -1,0 +1,27 @@
+<%= form_for(furdo) do |f| %>
+  <% if furdo.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(furdo.errors.count, "error") %> prohibited this furdo from being saved:</h2>
+
+      <ul>
+      <% furdo.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :client_name %>
+    <%= f.text_field :client_name %>
+  </div>
+
+  <div class="field">
+    <%= f.label :location %>
+    <%= f.text_field :location %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

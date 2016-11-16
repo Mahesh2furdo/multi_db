@@ -1,0 +1,2 @@
+class Furdo < ApplicationRecord
+end

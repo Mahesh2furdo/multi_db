@@ -1,0 +1,1 @@
+json.partial! "furdos/furdo", furdo: @furdo
